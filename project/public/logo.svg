@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      @keyframes drawContinuousA {
+        0% { stroke-dashoffset: 800; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .flowing-a {
+        stroke-dasharray: 800;
+        animation: drawContinuousA 3s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#000000"/>
+  
+  <!-- Continuous A stroke -->
+  <path class="flowing-a"
+    d="M60 140 
+       L100 40 
+       L140 140
+       M75 100
+       L125 100"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

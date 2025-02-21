@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Opening animation with subtle gradient */
+.opening-animation {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  background-size: 200% 200%;
+  animation: darkGradientShift 2s ease-in-out forwards;
+}
+
+@keyframes darkGradientShift {
+  0% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 100% 50%;
+    opacity: 0;
+  }
+}
+
+/* Enhanced glass effect gradient */
+.bg-rich-gradient {
+  background: linear-gradient(135deg, #121212 0%, #1e1e1e 50%, #121212 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Enhanced glass panel with better blur and transparency */
+.glass-panel {
+  background: rgba(25, 25, 25, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 32px rgba(255, 255, 255, 0.02);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  background: rgba(30, 30, 30, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 0 32px rgba(255, 255, 255, 0.03);
+}
+
+/* Refined pattern overlay */
+.pattern-overlay {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Enhanced glass input */
+.glass-input {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.glass-input:focus {
+  background: rgba(35, 35, 35, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 0 0 2px rgba(255, 255, 255, 0.05),
+    0 0 8px rgba(255, 255, 255, 0.05);
+  outline: none;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Setting default text color for the entire application */
+:root {
+  color-scheme: dark;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Form elements base styling */
+input, textarea, select {
+  background-color: rgba(30, 30, 30, 0.7);
+  color: #ffffff;
+}
+
+/* Animation keyframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .scale-102 {
+    transform: scale(1.02);
+  }
+}
+
+/* Glass card specific styles */
+.glass-card {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.2),
+    inset 0 0 16px rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(35, 35, 35, 0.65);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 0 24px rgba(255, 255, 255, 0.03);
+}
