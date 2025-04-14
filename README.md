@@ -20,15 +20,19 @@ Attendify is a simple attendance calculator that helps students track their atte
    ```sh  
    git clone https://github.com/your-username/attendify.git  
    ```  
-2. Navigate to the project folder:  
+2. Navigate to the attendify folder:  
    ```sh  
    cd attendify  
-   ```  
-3. Install dependencies (if applicable):  
+   ```
+3. Navigate to the project folder:  
+   ```sh  
+   cd project  
+   ```    
+4. Install dependencies (if applicable):  
    ```sh  
    npm install  
    ```  
-4. Run the project (if applicable):  
+5. Run the project (if applicable):  
    ```sh  
    npm start  
    ```  
